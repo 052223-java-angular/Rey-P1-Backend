@@ -58,3 +58,5 @@ This is a Java and Angular based application that will utilize the Poke API to e
 - **Documentation**: The repository should include a README file with clear instructions on how to run the application. Code should be well-commented to allow for easy understanding and maintenance.
 
 - **Scalable**: The design of the application should be scalable, allowing for easy addition of new features or modifications in the future.
+
+![title](p1-erd-backend.png)
