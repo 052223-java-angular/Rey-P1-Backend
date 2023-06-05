@@ -1,8 +1,22 @@
 # Compiled class file
 *.class
 
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
 # Log file
 *.log
+
+
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
 # BlueJ files
 *.ctxt
@@ -26,3 +40,14 @@ replay_pid*
 *.settings/
 *.classpath
 *.project
+
+.vs/
+.vscode/
+application.settings
+
+target/
+*.properties
+*.log
+*.DS_Store
+*.gz
+
