@@ -1,43 +1,37 @@
-# P0 - Pair Programming eCommerce Project
+# P1 - Java/Angular Solo Project - Backend
 
 ## Introduction
 
-This is a Java-based command-line interface (CLI) eCommerce application. The application will be primarily built using Java and will utilize a PostgreSQL database to store product and user information.
+This is a Java and Angular based application that will utilize the Poke API to extract certain information to use in the application. It will allow users to play against a CPU using information from the Poke API. Any data that result from a match will then be stored into a database. This data also includes a login feature for separate accounts to view their match history and compare their win/loss ratio to other unique users that exist in the database. On the backend only, there will exist methods to get Pokemon and various stats from the PokeAPI and calls to a database to get user related information.
 
 ## User Stories
 
-- **As a user**, I want to register an account so that I can have a personalized shopping experience.
-- **As a user**, I want to log in to my account so that I can access my shopping cart and order history.
-- **As a user**, I want to browse through products only when logging in.
-- **As a user**, I want to search for products by name, category, or price range so that I can find what I'm looking for.
-- **As a user**, I want to add products to my shopping cart so that I can purchase them later.
-- **As a user**, I want to modify the quantity or remove items from my cart so that I can make changes before finalizing the purchase.
-- **As a user**, I want to check out and pay for my order securely so that my personal and financial information is safe.
-- **As a user**, I want to review my order history so that I can keep track of my purchases.
-- **As a user**, I want to rate and review products so that I can share my experience with other users.
-- **As a user**, I want to view ratings and reviews from other users so that I can make informed buying decisions.
-
+- **As a user**, I want to register an account 
+- **As a user**, I want to log in to my account 
+- **As a user**, I want to get various Pokemon using the Poke API
+- **As a user**, I want to view my win loss ratio
+- **As a user**, I want to view a leaderboard of all the users given a match history
+- **As a user**, I should win/lose a match and should get that reflected on my user stats
 
 ## MVP (Minimum Viable Product)
 
 - User registration and login
-- Browsing and searching for products
-- Adding products to a shopping cart
-- Modifying the shopping cart
-- Secure payment process
-- Order history
-- Product rating and reviewing
+- Giving user random Pokemon name and stats
+- Have a Pokemon Model that translates API data to usable data
+- Leaderboard that can see various information from users
 
 ## Stretch Goals
 
-- Implementing a recommendation system based on user's previous purchases
-- Adding an admin role that can add, remove, or modify products
-- Implementing promotional codes and discounts
-- Adding a wish list feature
+- Implementing Pokemon typing and its downsides and upsides against other Pokemon
+- Allowing user to change password
+- Adding an admin role that can add, remove, or modify Pokemon API interpretations
+- Add multiplayer with another player
 
 ## Tech Stacks
 
-- **Java**: The main programming language used for building the application.
+- **Java**: One of the main programming languages used for building the application.
+- **Spring**: A framework used for the ease of integrating REST APIs
+- **Typescript**: The front end logic of the application.
 - **PostgreSQL**: Used as the database to store user, product, and order data.
 - **Maven or Gradle**: Used for managing project dependencies.
 - **JUnit**: A testing framework for Java applications, used to ensure our code works as expected.
@@ -64,4 +58,3 @@ This is a Java-based command-line interface (CLI) eCommerce application. The app
 - **Documentation**: The repository should include a README file with clear instructions on how to run the application. Code should be well-commented to allow for easy understanding and maintenance.
 
 - **Scalable**: The design of the application should be scalable, allowing for easy addition of new features or modifications in the future.
-
