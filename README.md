@@ -1,4 +1,4 @@
-# P1 - Java/Angular Solo Project - Backend
+# P1 - Java Pokemon Battler
 
 ## Introduction
 
@@ -19,11 +19,12 @@ This is a Java and Angular based application that will utilize the Poke API to e
 - Giving user random Pokemon name and stats
 - Have a Pokemon Model that translates API data to usable data
 - Leaderboard that can see various information from users
+- Win/Losing a game reflects on the User stats
+- Pokemon Typing allows users to deal more or less damage to another Pokemon
+- Allow user to change password
 
 ## Stretch Goals
 
-- Implementing Pokemon typing and its downsides and upsides against other Pokemon
-- Allowing user to change password
 - Adding an admin role that can add, remove, or modify Pokemon API interpretations
 - Add multiplayer with another player
 
