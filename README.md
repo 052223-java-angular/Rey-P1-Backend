@@ -1,8 +1,8 @@
-# P1 - Java/Angular Solo Project - Backend
+# P1 - Java Pokemon Battler
 
 ## Introduction
 
-This is a Java and Angular based application that will utilize the Poke API to extract certain information to use in the application. It will allow users to play against a CPU using information from the Poke API. Any data that result from a match will then be stored into a database. This data also includes a login feature for separate accounts to view their match history and compare their win/loss ratio to other unique users that exist in the database. On the backend only, there will exist methods to get Pokemon and various stats from the PokeAPI and calls to a database to get user related information.
+This is a Java and Angular based application that will utilize the Poke API to extract certain information to use in the application. It will allow users to play against a CPU using information from the Poke API. Any data that result from a match will then be stored into a database. This data also includes a login feature for separate accounts to view their match history and compare their win/loss ratio to other unique users that exist in the database. On the backend only, there will exist methods to get Pokemon and various stats from the PokeAPI and calls to a database to get user related information. In the frontend, the game logic will exist to display a grid of Pokemon that a user can call. Each round, the Pokemon will deal damage to each side depending on their typing and stats.
 
 ## User Stories
 
@@ -12,6 +12,9 @@ This is a Java and Angular based application that will utilize the Poke API to e
 - **As a user**, I want to view my win loss ratio
 - **As a user**, I want to view a leaderboard of all the users given a match history
 - **As a user**, I should win/lose a match and should get that reflected on my user stats
+- **As a user** I want to fight against another opponent with 6 random Pokemon
+- **As a user** I want to be able to view my opponent's 6 random Pokemon
+- **As a user** I want my Pokemon's stats to reflect those found in the API
 
 ## MVP (Minimum Viable Product)
 
@@ -19,13 +22,20 @@ This is a Java and Angular based application that will utilize the Poke API to e
 - Giving user random Pokemon name and stats
 - Have a Pokemon Model that translates API data to usable data
 - Leaderboard that can see various information from users
+- Win/Losing a game reflects on the User stats
+- Pokemon Typing allows users to deal more or less damage to another Pokemon
+- Damage calculation is done by comparing defense and attack, then 80 + subtracting that difference by the hp * any modifiers.
+- Allow user to change password
+- Allow user to fight against another player with 6 random Pokemon
 
 ## Stretch Goals
 
-- Implementing Pokemon typing and its downsides and upsides against other Pokemon
-- Allowing user to change password
 - Adding an admin role that can add, remove, or modify Pokemon API interpretations
+- Adding more moves that Pokemon can do
+- Adding an evolution feature if a valid Pokemon can evolve
+- Adding a unique battle feature that can increase Pokemon's power (Mega Evolution, Z-Move, etc)
 - Add multiplayer with another player
+- Add a chat feature between another player
 
 ## Tech Stacks
 
