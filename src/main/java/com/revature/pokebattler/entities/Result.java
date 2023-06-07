@@ -12,15 +12,15 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="roles")
-public class Role {
+@Table(name="results")
+public class Result {
     @Id
     private String id;
 
     @Column(name="name", nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "result", fetch = FetchType.LAZY)
     @JsonManagedReference
-    private Set<User> users;
+    private Set<Game> games;
 }
