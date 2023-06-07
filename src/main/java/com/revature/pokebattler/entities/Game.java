@@ -18,8 +18,10 @@ public class Game {
     private String game_id;
 
 
-    @Column(name="user_id", nullable = false)
-    private String user_id;
+    @ManyToOne
+    @JoinColumn(name="user_id")
+    @JsonBackReference
+    private User user;
 
     @Column(name="game_date", nullable = false)
     private Date game_date;
