@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.pokebattler.dtos.requests.NewLoginRequest;
 import com.revature.pokebattler.dtos.requests.NewUserRequest;
 import com.revature.pokebattler.dtos.responses.Principal;
+import com.revature.pokebattler.services.JwtTokenService;
 import com.revature.pokebattler.services.UserService;
 import com.revature.pokebattler.utils.custom_exceptions.ResourceConflictException;
 
@@ -20,7 +21,7 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/auth")
 public class AuthController {
     private final UserService userService;
-    // TODO Add JWT implementation.
+    private final JwtTokenService tokenService;
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody NewUserRequest req){
@@ -49,7 +50,9 @@ public class AuthController {
     public ResponseEntity<Principal> login(@RequestBody NewLoginRequest req){
         Principal principal = userService.login(req);
 
-        // TODO implement JWT
+        String token = tokenService.generateToken(principal);
+
+        principal.setToken(token);
 
         return ResponseEntity.status(HttpStatus.OK).body(principal);
     }
