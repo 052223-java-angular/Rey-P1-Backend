@@ -25,7 +25,7 @@ public class ExceptionController {
     public ResponseEntity<Map<String, Object>> handleUserNotFoundException(ResourceConflictException e){
         Map<String, Object> map = new HashMap<>();
         map.put("timestamp", new Date(System.currentTimeMillis()));
-        map.put("timestamp", e.getMessage());
+        map.put("message", e.getMessage());
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(map);
     }
     
@@ -33,7 +33,7 @@ public class ExceptionController {
     public ResponseEntity<Map<String, Object>> handleRoleNotFoundException(ResourceConflictException e){
         Map<String, Object> map = new HashMap<>();
         map.put("timestamp", new Date(System.currentTimeMillis()));
-        map.put("timestamp", e.getMessage());
+        map.put("message", e.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(map);
     }
 }
