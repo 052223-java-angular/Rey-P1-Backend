@@ -1,7 +1,5 @@
 package com.revature.pokebattler.entities;
 
-import java.util.Date;
-
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
@@ -25,25 +23,20 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name="games")
-public class Game {
+@Table(name="pokemon")
+public class Pokemon {
     @Id
-    private String game_id;
+    private int pid;
+
+    @Column(unique = true, nullable = false)
+    private String pokemonName;
 
     @ManyToOne
-    @JoinColumn(name="user_id")
+    @JoinColumn(name="pokemonType_id")
     @JsonBackReference
-    private User user;
+    private PokemonType pokemonType;
 
-    @Column(name="game_date", nullable = false)
-    private Date game_date;
-
-    @ManyToOne
-    @JoinColumn(name="result_id")
-    @JsonBackReference
-    private Result result;
-
-    @OneToMany(mappedBy="game", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "pokemon", fetch = FetchType.LAZY)
     @JsonManagedReference
     private Set<Game_Pokemon> game_pokemon;
 }
